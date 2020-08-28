@@ -1,6 +1,6 @@
 
 import pandas as pd
-df = pd.read_csv('winequality-red.csv', sep=';')
+df = pd.read_csv('parcialWine/winequality-red.csv', sep=';')
 df.head()
 
 alcohol_median = df.alcohol.median()

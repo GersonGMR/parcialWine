@@ -6,31 +6,31 @@ df.head()
 media_alcohol = df.alcohol.median()
 for wine, alcohol in enumerate(df.alcohol):
     if alcohol >= media_alcohol:
-        df.loc[wine, 'alcohol'] = 'alto'
+        df.loc[wine, 'alcohol'] = 'high'
     else:
-        df.loc[wine, 'alcohol'] = 'bajo'
+        df.loc[wine, 'alcohol'] = 'down'
 df.groupby('alcohol').quality.mean()
 
 media_ph = df.pH.median()
 for wine, pH in enumerate(df.pH):
     if pH >= media_ph:
-        df.loc[wine, 'pH'] = 'alto'
+        df.loc[wine, 'pH'] = 'high'
     else:
-        df.loc[wine, 'pH'] = 'bajo'
+        df.loc[wine, 'pH'] = 'down'
 df.groupby('pH').quality.mean()
 
 media_residual_sugar = df.residual_sugar.median()
 for wine, residual_sugar in enumerate(df.residual_sugar):
     if residual_sugar >= media_residual_sugar:
-        df.loc[wine, 'residual sugar'] = 'alto'
+        df.loc[wine, 'residual sugar'] = 'high'
     else:
-        df.loc[wine, 'residual sugar'] = 'bajo'
+        df.loc[wine, 'residual sugar'] = 'down'
 df.groupby('residual sugar').quality.mean()
 
 media_citric_acid = df.citric_acid.median()
 for wine, citric_acid in enumerate(df.citric_acid):
     if citric_acid >= media_citric_acid:
-        df.loc[wine, 'citric acid'] = 'alto'
+        df.loc[wine, 'citric acid'] = 'high'
     else:
-        df.loc[wine, 'citric acid'] = 'bajo'
+        df.loc[wine, 'citric acid'] = 'down'
 df.groupby('citric acid').quality.mean()

@@ -11,17 +11,17 @@ for wine, alcohol in enumerate(df.alcohol):
         df.loc[wine, 'alcohol'] = 'bajo'
 df.groupby('alcohol').quality.mean()
 
-mediah_ph = df.pH.median()
+media_ph = df.pH.median()
 for wine, pH in enumerate(df.pH):
-    if pH >= mediah_ph:
+    if pH >= media_ph:
         df.loc[wine, 'pH'] = 'alto'
     else:
         df.loc[wine, 'pH'] = 'bajo'
 df.groupby('pH').quality.mean()
 
-mediah_residual_sugar = df.residual_sugar.median()
+media_residual_sugar = df.residual_sugar.median()
 for wine, residual_sugar in enumerate(df.residual_sugar):
-    if residual_sugar >= mediah_residual_sugar:
+    if residual_sugar >= media_residual_sugar:
         df.loc[wine, 'residual sugar'] = 'alto'
     else:
         df.loc[wine, 'residual sugar'] = 'bajo'
